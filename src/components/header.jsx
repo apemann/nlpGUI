@@ -19,7 +19,7 @@ const Header = () => {
                 aria-label="Bootstrap"
                 style={{ fill: "green" }}
               >
-                <use href="#bootstrap" />
+                <use href="#grid" />
               </svg>
             </a>
 
@@ -45,9 +45,22 @@ const Header = () => {
                     height="24"
                     style={{ fill: "green" }}
                   >
-                    <use href="#speedometer2" />
+                    <use href="#table" />
                   </svg>
                   Extract Nouns and Verbs
+                </Link>
+              </li>
+              <li>
+                <Link to="/ner" className="nav-link text-white">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    style={{ fill: "green" }}
+                  >
+                    <use href="#people-circle" />
+                  </svg>
+                  NER
                 </Link>
               </li>
             </ul>
