@@ -3,23 +3,6 @@ import axios from "axios";
 import NerResults from "./nerResults";
 
 class Ner extends Component {
-  eg = [
-    {
-      end_char: 121,
-      label: "NORP",
-      label_code: 381,
-      start_char: 115,
-      text: "Indian",
-    },
-    {
-      end_char: 136,
-      label: "GPE",
-      label_code: 384,
-      start_char: 131,
-      text: "Delhi",
-    },
-  ];
-
   state = { postId: null, textAreaVal: "", responseData: null };
 
   handleSubmit = () => {
@@ -88,7 +71,10 @@ class Ner extends Component {
               </button>
             </div>
             {this.state.responseData != null && (
-              <NerResults results={this.state.responseData} />
+              <NerResults
+                text={this.state.textAreaVal}
+                results={this.state.responseData}
+              />
             )}
           </div>
         </div>
