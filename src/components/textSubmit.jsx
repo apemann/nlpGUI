@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class TextSubmit extends Component {
-  state = { postId: null, textAreaVal: "", responseData: null };
+  state = {
+    postId: null,
+    textAreaVal: "",
+    responseData: null,
+  };
 
   handleSubmit = () => {
     const { baseURL } = this.props;

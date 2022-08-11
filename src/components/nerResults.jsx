@@ -13,6 +13,7 @@ class NerResults extends Component {
       output.push(baseText.substring(last_idx, entity.start_char));
       output.push(
         <b
+          data-testid={entity.start_char}
           className={[
             entity.label,
             "ner-entity",
@@ -43,8 +44,10 @@ class NerResults extends Component {
     console.log(highlightedText);
 
     return (
-      <div className="row justify-content-around">
-        <div className="lh-lg">{highlightedText}</div>
+      <div className="row justify-content-around p-4">
+        <div className="lh-lg" aria-label="ner-output">
+          {highlightedText}
+        </div>
       </div>
     );
   }
